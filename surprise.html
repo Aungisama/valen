@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>surprise</title>
+    <link rel="stylesheet" href="sur.css">
+    <script>
+        function toggleVisibility() {
+            const input = document.getElementById("secret");
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
+        }
+
+        function toggleImage() {
+            const image = document.getElementById("secret-image");
+            if (image.style.display === "none") {
+                image.style.display = "block";
+            } else {
+                image.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="card-container">
+        <img src="image/Desktop - 1.jpg" alt="Valentine's Background" class="background-image">
+        <img id="secret-image" src="image/aunpao.png" alt="รูปที่ถูกซ่อน" style="display: none;">
+        <button onclick="toggleImage()">ดู/ซ่อน รูปภาพ</button>
+
+        <label for="secret">ข้อความสำคัญ:</label>
+        <input type="password" id="secret" value="https://gift.truemoney.com/campaign/?v=0194ff6dc0927d8d9cf82d977276b7f886o" readonly>
+        <button onclick="toggleVisibility()">ดู/ซ่อน</button>
+
+        <div class="button-container-2">
+            <a href="index.html"><img src="image/startbutton.svg" alt="Star" width="200" height="200"></a>
+        </div>
+    </div>
+</body>
+</html>
